@@ -1,0 +1,11 @@
+rule_id,field_or_key,validation,severity,expected_result
+DQ-01,transaction_id,Must not be blank,Error,Flag blank transaction ID
+DQ-02,customer_id,Must not be blank,Error,Flag blank customer ID
+DQ-03,account_id,Must not be blank,Error,Flag blank account ID
+DQ-04,transaction_date,Must be valid ISO date,Error,Flag invalid date
+DQ-05,amount,Must be numeric and >= 0,Error,Flag negative or non-numeric amount
+DQ-06,currency,Must exist in currency reference,Error,Flag unknown currency
+DQ-07,branch_code,Must exist in branch reference,Error,Flag unknown branch
+DQ-08,source_system + transaction_id,Must be unique,Error,Flag all rows in duplicate key group
+DQ-09,event_type,Must have event-accounting mapping,Warning,Flag unmapped event
+DQ-10,currency,Currency must match for reconciliation,Error,Do not compare different currencies

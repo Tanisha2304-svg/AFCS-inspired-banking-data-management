@@ -1,0 +1,11 @@
+test_case_id,scenario,test_data,steps,expected_result,priority
+UAT-001,Load CASA file,casa_transactions.csv,Load the CASA CSV,All rows load and record count is displayed,High
+UAT-002,Detect missing customer,TXN1005,Run DQ validation,Record is flagged for missing customer_id,High
+UAT-003,Detect negative amount,TXN1006,Run DQ validation,Record is flagged for negative amount,High
+UAT-004,Detect invalid branch,TXN1007,Run DQ validation,Record is flagged for unknown branch code,Medium
+UAT-005,Detect duplicate transaction,TXN1008,Run DQ validation,Both duplicate-key rows are flagged,High
+UAT-006,Detect unknown currency,LN3006,Run DQ validation,EUR is accepted if present in reference; no unsupported currency is flagged,Medium
+UAT-007,Generate balanced journal,TXN1001,Run mapping and journal simulation,Debit total equals credit total for the transaction,High
+UAT-008,Flag reconciliation difference,A1002,Run source-vs-GL reconciliation,"Difference of INR 2,000 is flagged as BREAK",High
+UAT-009,Export exceptions,Any DQ exceptions,Download exception report,CSV download contains rule IDs and messages,Medium
+UAT-010,No accounting mapping,Use an unknown event type,Run journal simulation,Transaction is excluded and unmapped event is reported,Medium

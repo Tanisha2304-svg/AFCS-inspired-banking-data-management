@@ -1,0 +1,8 @@
+account_id,gl_account,as_of_date,gl_balance,currency
+A1001,Customer Deposits,2026-10-31,25000,INR
+A1002,Customer Deposits,2026-10-31,40000,INR
+TD001,Term Deposits,2026-10-31,100000,INR
+TD002,Term Deposits,2026-10-31,50620,INR
+LN001,Loans Outstanding,2026-10-31,500000,INR
+LN002,Loans Outstanding,2026-10-31,85000,INR
+LN003,Loans Outstanding,2026-10-31,104200,INR

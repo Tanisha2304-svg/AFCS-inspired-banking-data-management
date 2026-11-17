@@ -1,0 +1,10 @@
+source_system,event_type,debit_account,credit_account,rule_description
+CASA,DEPOSIT,Customer Deposits,Cash/Settlement,Customer deposit received
+CASA,WITHDRAWAL,Customer Deposits,Cash/Settlement,Customer withdrawal
+CASA,INTEREST,Interest Expense,Customer Deposits,CASA interest accrual
+TERM_DEPOSIT,OPENING,Cash/Settlement,Term Deposits,Term deposit opened
+TERM_DEPOSIT,INTEREST,Interest Expense,Interest Payable,Term deposit interest
+TERM_DEPOSIT,MATURITY,Term Deposits,Cash/Settlement,Term deposit matured
+LOAN,DISBURSEMENT,Loans Outstanding,Cash/Settlement,Loan disbursement
+LOAN,REPAYMENT,Cash/Settlement,Loans Outstanding,Loan repayment
+LOAN,INTEREST,Interest Receivable,Interest Income,Loan interest event

@@ -1,0 +1,11 @@
+source_field,target_field,transformation_or_rule,mandatory,notes
+source_system,source_system,Uppercase and trim,Yes,CASA / TERM_DEPOSIT / LOAN
+transaction_id,transaction_id,Trim; preserve source identifier,Yes,Unique within source system
+customer_id,customer_id,Trim; null not permitted,Yes,Synthetic customer key
+account_id,account_id,Trim; preserve leading zeros if present,Yes,Synthetic account key
+transaction_date,transaction_date,Parse ISO date YYYY-MM-DD,Yes,Invalid date flagged
+event_type,event_type,Uppercase and trim,Yes,Must map to event accounting rules
+amount,amount,Cast to numeric; amount must be >= 0,Yes,Illustrative transaction amount
+currency,currency,Uppercase; validate against currency reference,Yes,No FX conversion in scope
+branch_code,branch_code,Trim; validate against branch reference,Yes,Branch code must exist
+product_term_or_type,product_term_or_type,Trim,No,Term or loan product category
